@@ -1,0 +1,64 @@
+PYTHON
+  - decorator
+  - inheritance and how accomplish in python
+  - does python support multiple inheritance? yes
+    - class MyClass(Base1, Base2)
+    - how does Python handle multiple resolution order (same method in all classes, which one gets called?)
+    - subClass animal dog golden retriever
+  - what is a serializer (pickle, binary)
+  - args vs kwargs
+  - tuple (immutable) vs list vs array (single data type)
+  - talk about double under methods __init__ etc.
+    - native language methods
+    - method overloading __add__
+      - sql alchemy ORM: DB sessions __stop__ method overload: destroy session and remove from pool
+  - what is 'self'
+    - what does it refer to in the __init__ method? (newly created object)
+    - what does it refer to in other methods? (the object whose method was called)
+  - how do you accomplish async actions in python
+    - asyncio library
+    - async / await
+    - coroutines
+  - when use threads and when use async?
+    - threads take overhead to create (only use for computationally expensive tasks)
+  - threading: multiple tasks executed at same time but on same core (so same CPU)
+    - share memory across all threads
+    - can use same data on all threads
+  - multiple threads update the same object.  how ensure data is written in way you want
+    - monitor / lock /
+    - deadlock: one thread waiting for monitor to show completion of another thread, it never completes so all threads get backed up
+  - parallel programming: (multi-processing)
+    - running multiple tasks at same time over all CPUs available in a cluster or in multiple cores on the same computer
+    - uses sub-processes, not threads
+    - can run processes in async or sync
+    - can only communicate to each other through inter system communication
+
+    - Do you know the segments in which a program gets divided?
+      - Stack, Data, Code, Heap
+    - which segments do threads share?
+      - Data, Code, Heap (share memory but have independent call stacks)
+    - Threads within the same process run in shared memory space, while processes run in separate memory spaces.
+
+ways can communicate from one server to another server
+
+what backend functionality have you built using python?
+what is celery
+queuing / messaging systems used?
+session
+  - use only in a single thread
+  - create one session and use for multiple queries (don't create a new session for each query)
+  - close session after query done
+  - session holds a proxy of related DB data (large scale proxy for db connection(s))
+transaction
+why use sql alchemy?
+event driven
+
+
+SQL
+  - functions
+    - get number of documents a query returns
+    - set value to a different type
+      - for example want null values to be something else
+      - for example, want an int to be a char?
+  - how would you get values from two different tables?
+  - how do you only return a set number of documents
