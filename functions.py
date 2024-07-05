@@ -6,7 +6,7 @@ def myFuncWithKeywordArgs(name, age):
 # keyword args can come in any order as long as argument name matches parameter name
 myFuncWithKeywordArgs(age=11, name="kyle")
 
-# single * is for getting all the argumnets (note args can be named anything could be myArgs)
+# single * is for getting all the arguments (note args can be named anything could be myArgs)
 
 
 def myFunc(*args):
@@ -34,3 +34,19 @@ myFunc2(age=22, name='bill')
 # *args must come before **kwArgs
 def ordering(arg1, arg2, *args, **kwArgs):
     pass
+
+
+
+def printArgs(**kwArgs):
+    for arg in kwArgs:
+        print(arg, kwArgs[arg])
+
+
+
+input = { "a": 1, "b": 2 }
+
+# can use ** to destructure dict and pass in as kwArgs
+printArgs(**input)
+# same as above
+printArgs(a=input["a"], b=input["b"])
+
