@@ -32,6 +32,12 @@ print(c)
 print(d)
 
 
+s = "Hello my name is"
+t = s.find("o")
+print(t) # 4
+
+print(s.lower())
+print(s.upper())
 
 
 
