@@ -1,7 +1,10 @@
-
-
-
 myDict = { 'a': 'a_value', 'b': 'b_value'}
+
+a = myDict.get('a', 'not found')
+print(a)
+n = myDict.get('c', 'c default value')
+print(n)
+
 print(list(myDict.keys()))
 print(list(myDict.values()))
 

@@ -45,8 +45,18 @@ for letter, names in itertools.groupby(names, first_letter):
     print(letter, list(names))
 
 
+########## yield from ###############
 
+def generator_delegate():
+    yield 3
+    yield 4
 
+def generator():
+    yield 1
+    yield 2
+    yield from generator_delegate()
 
+for item in generator():
+    print(item)
 
 

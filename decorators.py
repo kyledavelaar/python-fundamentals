@@ -10,15 +10,17 @@ def append_kyle(old_func):
 
 
 @append_kyle
-def write(a, b, **kwargs):
-    return 'hi ' + kwargs.get("name") + ' my name is '
+def write(*args, **kwargs):
+    return args[0] + " " + kwargs.get("name") + ' my name is '
 
 
-print(write(4, 5, name="maria"))
+print(write("yo", name="maria"))
+print(write("hello", name="good sir"))
 
-# ANOTHER EXAMPLE
 
-
+#################################################################
+# Decorator that accepts an argument
+#################################################################
 def type_check(correct_type):
     def check(old_function):
         def dec_function(arg):
@@ -47,9 +49,11 @@ def first_letter(word):
 print(first_letter('Hello World'))
 print(first_letter(['Not', 'A', 'String']))
 
-# ANOTHER EXAMPLE
 
 
+#################################################################
+#
+#################################################################
 def double(old_function):
     def new_func(*args, **kwargs):
         sum = 0
@@ -68,9 +72,7 @@ print(mult(4, 5))
 
 #################################################################
 #
-#############################################################
-
-
 #################################################################
-#
-#############################################################
+
+
+
