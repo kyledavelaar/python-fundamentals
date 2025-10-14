@@ -1,6 +1,5 @@
-# Like an interface in Java
-# sub class inherits from mixin class but child does not have the isA relationship to the mixin
-# mixin is just a set of functions that you want a child class to have access to and could be passed to a number of classes that are all different (don't all have the same isA relationship)
+# Like an interface in Java where sub class inherits from mixin class but child does not have the isA relationship to the mixin (no isA relationship is Java specific)
+# in python mixin is a set of functions that you want a child class to have access to and could be passed to a number of classes that are all different (note that in python it would still have a isA relationship)
 
 
 class MathMixin:
@@ -25,5 +24,7 @@ class Operator(MathMixin):
 
 
 operator = Operator(8)
+
+print(isinstance(operator, MathMixin))
 
 print(operator.add(10).subtract(5).equals())

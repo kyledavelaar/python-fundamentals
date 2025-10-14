@@ -12,12 +12,17 @@ for letter in myList:
 
 
 print('--------------TUPLES----------------')
-# tuple order can't change
-tup = (3, 4, 1)
+# tuple:
+# immutable, order can't change, can't add/remove items, can't reassign items,
+# can have duplicates
+tup = (3, 4, 1, 1)
+for i in tup:
+    print(i)
 
 print('--------------SETS----------------')
-# set is unordered and unchangeable but can add/remove items
-mySet = {'1', 2, "word"}
+# unordered and unchangeable but can add/remove items
+# don't allow duplicate entries
+mySet = {'1', 2, "word", 2}
 mySet.add('added this')
 mySet.remove('1')
 
