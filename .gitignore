@@ -2,3 +2,4 @@
 np_objects
 .DS_store
 .uv/
+*.pyc
