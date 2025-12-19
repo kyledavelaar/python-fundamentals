@@ -48,7 +48,7 @@ class Employee(Person):
         # always use _income in getters/setters otherwise you'll get infinite recursion
         self._income = value
 
-    # static methods can't access or alter the class state
+    # static methods can't access or alter the class instance state but can alter global class state
     # can be called from instance or from Employee/Person class
     @staticmethod
     def getPersonType():
